@@ -112,7 +112,7 @@ if(myValue){
   *  true && 6
   *  0 || "hi"
   *  ["a","b","c"] || "123"
-  *  {"key":"value"} || false
+  *  false || null
 
   <details><summary>answers</summary>
   ```js
