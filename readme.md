@@ -295,7 +295,7 @@ Jimmy loves roller coasters, but there are a bunch of rules (ugh!) for riding:
 
 For starters, it costs 5 tokens. Here's how we might code that:
 
-```
+```js
 // assume we'll have a tokens variable
 // storing the number of tokens
 if ( tokens >= 5 ) {
