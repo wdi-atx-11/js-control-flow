@@ -427,8 +427,8 @@ For loops for arrays usually use a counter variable to move through the indices 
 
 ```js
 var friends = ["Bali", "Nat", "Kelly"]
-for (var i = 0; i < m.length; i++) {
-  console.log(m[i] + " is a nice person");
+for (var i = 0; i < friends.length; i++) {
+  console.log(friends[i] + " is a nice person");
 }
 
 ```
@@ -454,6 +454,7 @@ for (var height=48, yearlyGrowth=1, age=8; age<=18; height += yearlyGrowth){
    } else {
       yearlyGrowth = 1;
    }
+   age++;
 }
 console.log("Adult height is ", height, " inches!");
 ```
