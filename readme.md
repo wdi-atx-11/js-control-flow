@@ -109,7 +109,7 @@ if(myValue){
   </details>
 
 1. What is the outcome of the following expressions?
-  *  true && 6
+  *  1 && 6
   *  0 || "hi"
   *  ["a","b","c"] || "123"
   *  false || null
