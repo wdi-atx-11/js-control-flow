@@ -296,42 +296,43 @@ Variables created with JavaScript's `let` and `const` reserved words have "block
 
 So what is a block?
 
-The portion of an `if`, `else`, `for`, or `switch` statement that is between `{` and `}` is a block.
+A block is the portion of an `if`, `else`, `for`, `switch`, or similar statement that is between `{` and `}`.  (Functions use a slightly different kind of scope - code inside a function has the power to look outside into larger scopes.)
 
-In the example below, which line(s) are inside the `if` statement's block?
+1. In the example below, which line(s) are inside the `if` statement's block?
 
-```js
-1
-2 if ( degrees === 90 ) {
-3
-4     console.log('right angle');
-5 }
-6
-```
-
-
-In the ES6 example below, on what line(s) is the `angle` variable in scope?
-
-```js
-1
-2 if ( degrees === 90 ) {
-3     let angle = 'right';
-4     console.log(`${angle} angle`);
-5 }
-6
-```
+	```js
+	1
+	2 if ( degrees === 90 ) {
+	3
+	4     console.log('right angle');
+	5 }
+	6
+	```
 
 
+1. In the ES6 example below, on what line(s) is the `angle` variable in scope?
 
-In the ES6 or ES5 example below, on what lines is the `angle` variable in scope?
-```js
-1
-2 if ( degrees === 90 ) {
-3     var angle = 'right';
-4     console.log(angle + ' angle');
-5 }
-6
-```
+	```js
+	1
+	2 if ( degrees === 90 ) {
+	3     let angle = 'right';
+	4     console.log(`${angle} angle`);
+	5 }
+	6
+	```
+
+
+
+1. In the ES6 or ES5 example below, on what lines is the `angle` variable in scope?
+
+	```js
+	1
+	2 if ( degrees === 90 ) {
+	3     var angle = 'right';
+	4     console.log(angle + ' angle');
+	5 }
+	6
+	```
 
 
 
