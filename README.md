@@ -36,7 +36,7 @@ At the very lowest level, computers understand our instructions as sequences of 
 
 Boolean logic is the closest web developers need to get to thinking about binary code.  In boolean logic, every value is either true or false.
 
-```js
+```javascript
 typeof(true)    // boolean
 typeof(false)   // boolean
 ```
@@ -45,7 +45,7 @@ JavaScript blurs this line a bit by using "truthy" and "falsey" values.  The pos
 
 To check whether some value is truthy or falsey, try the following structure in your JavaScript console:
 
-```js
+```javascript
 var myValue = "fishing";
 if(myValue){
   console.log(myValue, " is truthy!");
@@ -81,7 +81,7 @@ if(myValue){
   * false && ((true || false) && (false || true))
 
   <details><summary>answers</summary>
-  ```js
+  ```javascript
   * true || false    	   // true
   * false && false	     // false
   * true && false	       // false
@@ -116,7 +116,7 @@ if(myValue){
   *  false || null
 
   <details><summary>answers</summary>
-  ```js
+  ```javascript
   *  1 && 6                     // 6
   *  0 || "hi"                  // "hi"
   *  ["a","b","c"] || "123"     // ["a","b","c"]
@@ -137,7 +137,7 @@ The boolean expression inside an `if`'s parentheses will always be evaluated as 
 
 A diehard Giants fan might have the following rules for baseball games:
 
-```js
+```javascript
 if (giantsPlaying) {
   getTickets();
 }
@@ -149,7 +149,7 @@ if (!giantsPlaying) {
 
 We can rephrase this more succinctly using `if` and `else`.
 
-```js
+```javascript
 if (giantsPlaying) {
   getTickets();
 } else {
@@ -160,7 +160,7 @@ if (giantsPlaying) {
 
 A slightly more complex boolean expression will help our Giants fan save some money by adding another requirement to purchase tickets:
 
-```js
+```javascript
 if (giantsPlaying && gameInSF){
   getTickets();
 } else {
@@ -172,7 +172,7 @@ if (giantsPlaying && gameInSF){
 
  Here's a sample ruleset for commuters:
 
-```js
+```javascript
 var destination = "GA";
 if ( hasBike ) {
   rideToGA();
@@ -188,7 +188,7 @@ if ( hasBike ) {
 
 A strategy for choosing what to drink:
 
-```js
+```javascript
 var drink;
 
 if (tooSleepy) {
@@ -212,7 +212,7 @@ if (tooSleepy) {
 
 A `switch` statement checks the value of one variable or expression to determine which of many "cases" to jump to.  Here's code for a vending machine with a different price for each row:
 
-```js
+```javascript
 switch (row){
 	case 1: 	
 		price = 0.25;
@@ -236,7 +236,7 @@ switch (row){
 
 **Loose Control Flow** (watch out for edge cases!)
 
-```js
+```javascript
 if ( username ) {
 	// submit signup form
 }
@@ -250,7 +250,7 @@ if ( username.length > 0) {
 
 **Ternary operator**
 
-```js
+```javascript
 var username = last_name ? first_name + last_name : first_name;
 
 // same as
@@ -263,7 +263,7 @@ if ( last_name ) {
 
 **Conditional assignment: `||` to set to a default value**
 
-```js
+```javascript
 var bestCity = yourCity || "San Francisco";
 
 // same as
@@ -277,7 +277,7 @@ if ( yourCity ) {
 
 **Conditional Execution: `&&` to handle issues**
 
-```js
+```javascript
 badThing && alert("Uh oh!")
 
 // same as
@@ -296,7 +296,7 @@ Jimmy loves roller coasters, but there are a bunch of rules (ugh!) for riding:
 
 For starters, it costs 5 tokens. Here's how we might code that:
 
-```js
+```javascript
 // assume we'll have a tokens variable
 // storing the number of tokens
 if ( tokens >= 5 ) {
@@ -310,7 +310,7 @@ Pseudocode or edit the code above to check the following requirements:
 
 1. Add a requirement that riders must be at least 4ft tall.   
   <details><summary>answer</summary>
-    ```js
+    ```javascript
     if ( tokens >= 5 && height >= 4) {
         console.log("Step right up!");
     } else {
@@ -321,7 +321,7 @@ Pseudocode or edit the code above to check the following requirements:
 
 2. Add a requirement that riders must be at least 12 years old.  
   <details><summary>answer</summary>
-    ```js
+    ```javascript
   	if ( tokens >= 5 && height >= 4 && age >=12) {
   	    console.log("Step right up!");
   	} else {
@@ -333,7 +333,7 @@ Pseudocode or edit the code above to check the following requirements:
 3. Replace the previous rule: now riders under 12 can participate when they're accompanied by an adult.  
 
   <details><summary>answer</summary>
-    ```js
+    ```javascript
     if ( tokens >= 5 && height >= 4 ) {
       if (age >= 12 || hasAdult){
           console.log("Step right up!");
@@ -350,7 +350,7 @@ Pseudocode or edit the code above to check the following requirements:
 
 
   <details><summary>answer</summary>
-    ```js
+    ```javascript
     if (!bossLooking){
   		console.log("Step right up!");
   	} else {
@@ -371,7 +371,7 @@ Pseudocode or edit the code above to check the following requirements:
 
 
   <details><summary>answer</summary>
-    ```js
+    ```javascript
     if (!bossLooking){
   		console.log("Step right up!");
   	} else {
@@ -405,7 +405,7 @@ In while loops, the initial setup happens before the loop. The continue conditio
 
 
 
-```js
+```javascript
 var minutesBeforeWork = 80;                    // setup:  plan to wake up early
 while (minutesBeforeWork > 30) {               // continue condition: leave enough time to get day clothes on
   minutesBeforeWork = minutesBeforeWork - 5;   // update: hit snooze!
@@ -416,7 +416,7 @@ while (minutesBeforeWork > 30) {               // continue condition: leave enou
 
 For loops allow the setup, continue condition, and update expression to live inside the `for` loop parentheses.
 
-```js
+```javascript
 for (var count = 1; count <= 3; count++){
   console.log(count);
 }
@@ -426,7 +426,7 @@ console.log("Go Team!");
 
 For loops for arrays usually use a counter variable to move through the indices of the array.
 
-```js
+```javascript
 var friends = ["Bali", "Nat", "Kelly"]
 for (var i = 0; i < friends.length; i++) {
   console.log(friends[i] + " is a nice person");
@@ -439,7 +439,7 @@ We'll see how to use special iterator methods to move through arrays sequentiall
 
 For loops only really need a continue condition (or the loop will never end!). We can do setup before the loop, and we can do updating inside the loop. In this way, a for loop can look a lot like a while loop.
 
-```js
+```javascript
 var minutesBeforeWork = 540;
 for( ; minutesBeforeWork > 30; ) {
   minutesBeforeWork = minutesBeforeWork - 5;
@@ -448,7 +448,7 @@ for( ; minutesBeforeWork > 30; ) {
 
 Here's an example that takes advantage of JavaScript for loops' flexibility (perhaps at the cost of readability!).  
 
-```js
+```javascript
 for (var height=48, yearlyGrowth=1, age=8; age<=18; height += yearlyGrowth){
    if (growthSpurt){
       yearlyGrowth = 6;
@@ -464,7 +464,7 @@ console.log("Adult height is ", height, " inches!");
 
 The reserved word `break` will break us out of a loop immediately.  
 
-```js
+```javascript
 for (var i = 0; i < 10; i+=2) {
   console.log(i);
   break;
@@ -483,7 +483,7 @@ while (j < 10) {
 Use a `for` or `while` loop to console log a shuttle launch countdown:  "T minus 10", then "9", "8", "7", "6", "5", "4", "3", "2", "1", "0", "Liftoff!".
 
 <details><summary>answer</summary>
-  ```js
+  ```javascript
   console.log("T minus 10");
   for (var i=9; i>=0; i--){
     console.log(i);   // can log i.toString() to convert
@@ -491,7 +491,7 @@ Use a `for` or `while` loop to console log a shuttle launch countdown:  "T minus
   console.log("Liftoff!");
   ```
 
-  ```js
+  ```javascript
   console.log("T minus 10");
   i = 9;
   while (i>=0){
