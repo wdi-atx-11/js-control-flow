@@ -508,7 +508,7 @@ Use a `for` or `while` loop to console log a shuttle launch countdown:  "T minus
 
 ### Independent Practice
 
-Practice with this [training](https://github.com/sf-wdi-labs/js-control-flow-training/).  
+Practice with this [training](https://github.com/wdi-atx-11/js-control-flow-training).  
 
 
 ### Closing Thoughts
