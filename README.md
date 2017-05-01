@@ -81,13 +81,14 @@ if(myValue){
   * false && ((true || false) && (false || true))
 
   <details><summary>answers</summary>
-  ```javascript
+  <pre><code>
   * true || false    	   // true
   * false && false	     // false
   * true && false	       // false
   * (false || true) && true	// true
   * false && ((true || false) && (false || true))	// false
-  ```
+  </code></pre>  
+	
   Note that JavaScript is lazy when it can quit evaluating a boolean expression early. For example, in the last expression above, you can tell from just the first `false &&` that the whole expression will be false.
   </details>
 
@@ -106,7 +107,9 @@ if(myValue){
   * `undefined`
 
   <details><summary>answers</summary>
+  <pre><code>
   truthy: `1`, `"abc"`, `[]`, `{}`, `Math.PI`, `Array`, `Object`      
+  </code></pre>
   </details>
 
 1. What is the outcome of the following expressions?
@@ -116,12 +119,12 @@ if(myValue){
   *  false || null
 
   <details><summary>answers</summary>
-  ```javascript
+  <pre><code>
   *  1 && 6                     // 6
   *  0 || "hi"                  // "hi"
   *  ["a","b","c"] || "123"     // ["a","b","c"]
   *  false || null              // null
-  ```
+  </code></pre>
   </details>
 
 
@@ -232,7 +235,7 @@ switch (row){
 ```
 
 
-###Conditional Control Flow Tricks
+### Conditional Control Flow Tricks
 
 **Loose Control Flow** (watch out for edge cases!)
 
@@ -310,30 +313,30 @@ Pseudocode or edit the code above to check the following requirements:
 
 1. Add a requirement that riders must be at least 4ft tall.   
   <details><summary>answer</summary>
-    ```javascript
+    <pre><code>
     if ( tokens >= 5 && height >= 4) {
         console.log("Step right up!");
     } else {
         console.log("Sorry, you can't ride.");
     }
-    ```
+    </code></pre>
   </details>
 
 2. Add a requirement that riders must be at least 12 years old.  
   <details><summary>answer</summary>
-    ```javascript
+    <pre><code>
   	if ( tokens >= 5 && height >= 4 && age >=12) {
   	    console.log("Step right up!");
   	} else {
   	    console.log("Sorry, you can't ride.");
   	}
-    ```
+    </code></pre>
   </details>
 
 3. Replace the previous rule: now riders under 12 can participate when they're accompanied by an adult.  
 
   <details><summary>answer</summary>
-    ```javascript
+    <pre><code>
     if ( tokens >= 5 && height >= 4 ) {
       if (age >= 12 || hasAdult){
           console.log("Step right up!");
@@ -343,14 +346,14 @@ Pseudocode or edit the code above to check the following requirements:
     } else {
         console.log("Sorry, you can't ride.");
     }
-    ```
+    </code></pre>
   </details>
 
 4. (If the boss isn't looking, you can go on in!)  
 
 
   <details><summary>answer</summary>
-    ```javascript
+    <pre><code>
     if (!bossLooking){
   		console.log("Step right up!");
   	} else {
@@ -364,14 +367,14 @@ Pseudocode or edit the code above to check the following requirements:
   		    console.log("Sorry, you can't ride.");
   		}
   	}
-    ```
+    </code></pre>
   </details>
 
 5. Riders with a park pass get in free.
 
 
   <details><summary>answer</summary>
-    ```javascript
+    <pre><code>
     if (!bossLooking){
   		console.log("Step right up!");
   	} else {
@@ -385,7 +388,7 @@ Pseudocode or edit the code above to check the following requirements:
   		    console.log("Sorry, you can't ride.");
   		}
   	}
-    ```
+    </code></pre>
   </details>
 
 
@@ -483,15 +486,15 @@ while (j < 10) {
 Use a `for` or `while` loop to console log a shuttle launch countdown:  "T minus 10", then "9", "8", "7", "6", "5", "4", "3", "2", "1", "0", "Liftoff!".
 
 <details><summary>answer</summary>
-  ```javascript
+  <pre><code>
   console.log("T minus 10");
   for (var i=9; i>=0; i--){
     console.log(i);   // can log i.toString() to convert
   }
   console.log("Liftoff!");
-  ```
+  </code></pre>
 
-  ```javascript
+  <pre><code>
   console.log("T minus 10");
   i = 9;
   while (i>=0){
@@ -499,7 +502,7 @@ Use a `for` or `while` loop to console log a shuttle launch countdown:  "T minus
     i--;
   }
   console.log("Liftoff!");
-  ```
+  </code></pre>
 </details>
 
 
