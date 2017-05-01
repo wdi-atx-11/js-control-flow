@@ -216,7 +216,7 @@ if (tooSleepy) {
 A `switch` statement checks the value of one variable or expression to determine which of many "cases" to jump to.  Here's code for a vending machine with a different price for each row:
 
 ```javascript
-switch (row){
+switch (price){
 	case 1: 	
 		price = 0.25;
 		break;
@@ -229,7 +229,7 @@ switch (row){
 	case 4:
 		price = 1.00;
 		break;
-	default:  // the rest of the products (rows 5-7)
+	default:  // the rest of the products (price 5-7)
 		price = 1.25;
 }			
 ```
